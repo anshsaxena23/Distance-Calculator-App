@@ -6,7 +6,7 @@ This is a full-stack, containerized web application designed to calculate the di
 The stack includes:
 * **Frontend:** React (served by Nginx)
 * **Backend:** Python 3.10 / FastAPI
-* **Database:** SQLite (using SQLAlchemy ORM)
+* **Database:** PostgreSQL (using SQLAlchemy ORM)
 * **Deployment:** Docker and Docker Compose
   
 Step 1 - Download / Clone the repository in a folder.
