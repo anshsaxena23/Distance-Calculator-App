@@ -28,9 +28,10 @@ Step 3 - **Build and Run the Containers:**
   This command reads the `docker-compose.yaml` file, builds the `app` (FastAPI) and `nginx` services, sets up the network, and starts everything in detached mode (`-d`).
 
 Step 4 - **Access the Application:**
-    Once the containers are running (this may take a minute for the first build), you can access the application:
-    * **Web App (Frontend):** `http://localhost:3000`
-    * **Direct API Documentation (FastAPI):** `http://localhost:8000/api/docs` (For testing and viewing available endpoints)
+
+- Once the containers are running (this may take a minute for the first build), you can access the application:
+- **Web App (Frontend):** `http://localhost:3000`
+- **Direct API Documentation (FastAPI):** `http://localhost:8000/api/docs` (For testing and viewing available endpoints)
 
 ## Stopping and Cleaning Up
 
