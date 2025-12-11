@@ -1,0 +1,33 @@
+{
+  "builds": [
+    {
+      "src": "distance_calculator/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "distance_calculator/build"
+      }
+    },
+    {
+      "src": "app/main.py",
+      "use": "@vercel/python",
+      "config": {
+        "maxLambdaSize": "250mb",
+        "runtime": "python3.12"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "app/main.py"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "distance_calculator/build/$1"
+    }
+  ],
+  "excludeFiles": [
+    "**/node_modules/**",
+    "**/.git/**"
+  ]
+}
