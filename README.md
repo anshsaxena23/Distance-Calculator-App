@@ -10,6 +10,7 @@ The stack includes:
 * **Deployment:** Docker and Docker Compose
   
 Step 1 - Download / Clone the repository in a folder.
+
   **Clone the Repository:**
     ```bash
     git clone [https://github.com/anshsaxena23/Distance-Calculator-App](https://github.com/anshsaxena23/Distance-Calculator-App)
