@@ -45,6 +45,8 @@ Step 4 - **Access the Application:**
 - **Web App (Frontend):** `http://localhost:3000`
 - **Direct API Documentation (FastAPI):** `http://localhost:8000/api/docs` (For testing and viewing available endpoints)
 
+## User Signup and Login is required for accessing the application further ##
+
 ## Stopping and Cleaning Up
 
 To stop and remove all services, networks, and volumes created by Docker Compose:
