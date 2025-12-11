@@ -25,9 +25,5 @@
       "src": "/(.*)",
       "dest": "distance_calculator/build/$1"
     }
-  ],
-  "excludeFiles": [
-    "**/node_modules/**",
-    "**/.git/**"
   ]
 }
