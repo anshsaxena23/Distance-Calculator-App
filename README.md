@@ -27,6 +27,10 @@ Step 1.3 - Run npm build command to build the React App
 
     npm run build
 
+Step 1.4 - Run the following code 
+
+    cd ../
+
 Step 2 - **[Docker](https://www.docker.com/products/docker-desktop)**: Includes Docker Engine and Docker Compose.
 
 Step 3 - **Build and Run the Containers:**
