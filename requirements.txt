@@ -1,0 +1,9 @@
+pandas
+sqlalchemy
+fastapi
+uvicorn
+psycopg2-binary
+requests
+geopy
+passlib[argon2_cffi]
+argon2_cffi

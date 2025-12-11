@@ -1,0 +1,109 @@
+.auth-container {
+    min-height: 100vh;
+    background-color: #f0f0f0; /* Light gray background */
+    padding: 20px;
+}
+
+/* Header Styles */
+.header {
+    background-color: #333; /* Dark background */
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.header-actions button {
+    margin-left: 10px;
+    padding: 8px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.btn-signup {
+    background-color: #fff;
+    color: #333;
+}
+
+.btn-login {
+    background-color: #17a2b8; /* Blue color */
+    color: white;
+}
+
+/* Divider */
+.divider {
+    border-top: 3px solid #007bff; /* Blue line */
+    margin: 0 40px 30px;
+}
+
+/* Main Content Layout */
+.main-content {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Space between the cards */
+    padding: 20px 40px;
+}
+
+/* Card Styles */
+.form-card, .info-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1; /* Makes cards take equal space */
+    max-width: 400px;
+}
+
+.form-card input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.form-card button {
+    width: 100%;
+    padding: 12px;
+    background-color: #dc3545; /* Reddish button color */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+/* Status Messages */
+.error-message {
+    color: red;
+    margin-bottom: 10px;
+}
+
+.success-message {
+    color: green;
+    margin-bottom: 10px;
+}
+
+/* Highlight the active button */
+.btn-active {
+    background-color: #007bff; /* Blue active background */
+    color: white !important;
+    font-weight: bold;
+    border: 1px solid #007bff;
+}
+
+/* Ensure default buttons styles don't conflict */
+.btn-signup, .btn-login {
+    /* Reset default styles when not active */
+    background-color: transparent; 
+    color: #333;
+    border: 1px solid #ccc;
+}

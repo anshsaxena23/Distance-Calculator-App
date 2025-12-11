@@ -1,0 +1,51 @@
+services:
+  # 1. PostgreSQL Database Service
+  db:
+    image: postgres:14-alpine # Use a lightweight, stable PostgreSQL image
+    container_name: postgres_db
+    restart: always
+    environment:
+      # --- IMPORTANT: Set the credentials ---
+      POSTGRES_USER: myuser
+      POSTGRES_PASSWORD: mypassword
+      POSTGRES_DB: mydatabase
+    ports:
+      # Expose the database port to your local machine (Optional but useful for local development/tools)
+      - "5432:5432" 
+    volumes:
+      # Persist the data so it doesn't disappear when the container stops/restarts
+      - postgres_data:/var/lib/postgresql/data 
+
+  # 2. Python Application Service (See Step 2)
+  app:
+    build: . # Tells Docker Compose to build the image from the Dockerfile in the current directory
+    container_name: python_app
+    ports:
+      # Expose your Python application port if it's a web service (e.g., Flask/Django)
+      - "8000:8000" 
+    depends_on:
+      - db # Ensures the 'db' service starts before the 'app' service
+    environment:
+      # Pass the database credentials to the Python application
+      DB_HOST: db # Use the service name as the hostname!
+      DB_USER: myuser
+      DB_PASSWORD: mypassword
+      DB_NAME: mydatabase
+  
+  # 3. React Frontend Service (Web Server)
+  frontend:
+    image: nginx:stable-alpine  # Use a lightweight Nginx image
+    container_name: react_frontend
+    # Expose port 80 (Nginx default) to port 3000 on your local machine
+    ports:
+      - "3000:80" 
+    depends_on:
+      - app # Ensure the backend API is up before starting the frontend
+    volumes:
+      # Map the Nginx config file into the container
+      - ./nginx.conf:/etc/nginx/nginx.conf
+      # Map the compiled React build directory into the Nginx web root
+      - ./distance_calculator/build:/usr/share/nginx/html
+volumes:
+  # Define the volume to be used by the 'db' service
+  postgres_data:

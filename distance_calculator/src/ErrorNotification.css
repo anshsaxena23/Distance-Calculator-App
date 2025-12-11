@@ -1,0 +1,67 @@
+/* --- Error Blip Component Styles --- */
+
+.notification-blip-container {
+    /* Position the blip absolutely, often fixed/sticky near the top-right of the screen */
+    position: fixed; /* Or 'absolute' if you want it relative to a container */
+    top: 20px;
+    right: 20px;
+    z-index: 1000; /* Ensure it floats above other content */
+}
+
+.error-blip {
+    display: flex;
+    align-items: flex-start;
+    padding: 15px 20px;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    border: 1px solid #dc3545; /* Red border */
+    background-color: #fff0f0; /* Light red background */
+    max-width: 300px;
+    color: #333;
+    animation: fadeIn 0.3s ease-in;
+}
+
+.blip-content {
+    flex-grow: 1;
+    padding-right: 15px;
+}
+
+.blip-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.blip-header .icon {
+    font-size: 1.2em;
+    margin-right: 8px;
+    color: #dc3545; /* Red icon color */
+}
+
+.blip-title {
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #dc3545; /* Red title color */
+}
+
+.blip-message {
+    font-size: 0.9em;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.blip-close {
+    background: none;
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
+    color: #dc3545;
+    padding: 0;
+    margin-left: auto;
+    line-height: 1;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
