@@ -19,6 +19,14 @@ Step 1.1 - Change Directory to the App Folder
 
     cd Distance-Calculator-App
 
+Step 1.2 - Run npm command to download the dependencies.
+
+    npm install
+
+Step 1.3 - Run npm build command to build the React App
+
+    npm run build
+
 Step 2 - **[Docker](https://www.docker.com/products/docker-desktop)**: Includes Docker Engine and Docker Compose.
 
 Step 3 - **Build and Run the Containers:**
