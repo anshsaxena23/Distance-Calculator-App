@@ -17,7 +17,7 @@ Step 1 - Download / Clone the repository in a folder.
 
 Step 1.1 - Change Directory to the App Folder
 
-    cd Distance-Calculator-App
+    cd Distance-Calculator-App/distance_calculator
 
 Step 1.2 - Run npm command to download the dependencies.
 
