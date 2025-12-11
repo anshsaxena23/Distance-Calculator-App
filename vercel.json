@@ -1,14 +1,15 @@
 {
   "builds": [
     {
-      "src": "distance_calculator/package.json",
+      "src": "distance_calculator/package.json", 
       "use": "@vercel/static-build",
       "config": {
-        "distDir": "distance_calculator/build"
+        "distDir": "build",
+        "buildCommand": "npm install && npm run build"
       }
     },
     {
-      "src": "app/main.py",
+      "src": "api_path/main.py",
       "use": "@vercel/python",
       "config": {
         "maxLambdaSize": "250mb",
@@ -19,7 +20,7 @@
   "routes": [
     {
       "src": "/api/(.*)",
-      "dest": "app/main.py"
+      "dest": "api_path/main.py"
     },
     {
       "src": "/(.*)",
