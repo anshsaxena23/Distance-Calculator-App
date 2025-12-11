@@ -16,12 +16,15 @@ Step 1 - Download / Clone the repository in a folder.
     git clone [https://github.com/anshsaxena23/Distance-Calculator-App](https://github.com/anshsaxena23/Distance-Calculator-App)
     cd Distance-Calculator-App
     ```
+
 Step 2 - **[Docker](https://www.docker.com/products/docker-desktop)**: Includes Docker Engine and Docker Compose.
+
 Step 3 - **Build and Run the Containers:**
     This command reads the `docker-compose.yaml` file, builds the `app` (FastAPI) and `nginx` services, sets up the network, and starts everything in detached mode (`-d`).
     ```bash
     docker compose up --build -d
     ```
+
 Step 4 - **Access the Application:**
     Once the containers are running (this may take a minute for the first build), you can access the application:
     * **Web App (Frontend):** `http://localhost:3000`
