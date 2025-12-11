@@ -13,7 +13,9 @@ Step 1 - Download / Clone the repository in a folder.
 
   **Clone the Repository:**
     
-    git clone https://github.com/anshsaxena23/Distance-Calculator-App cd Distance-Calculator-App
+    git clone https://github.com/anshsaxena23/Distance-Calculator-App 
+    
+    cd Distance-Calculator-App
 
 Step 2 - **[Docker](https://www.docker.com/products/docker-desktop)**: Includes Docker Engine and Docker Compose.
 
